@@ -69,12 +69,12 @@ $SAMPLE.R2.fasta.
 
 4. Verify that read names are in the format accepted by the pipeline:
 
-@HWUSI-EAS100R:6:73:941:1973#0/1
+\@HWUSI-EAS100R:6:73:941:1973#0/1
 
 If read names are in this format, proceed to step 6. If not, they must be modified. The folder contains a pre-made script (readnamemodifier_newnameformat.pl) to convert the most common read names to the format accepted by the pipeline:
 
-@EAS139:136:FC706VJ:2:2104:15343:197393 1:Y:18:ATCACG
-@EAS139:136:FC706VJ:2:2104:15343:197393 1:N:18:1
+\@EAS139:136:FC706VJ:2:2104:15343:197393 1:Y:18:ATCACG
+\@EAS139:136:FC706VJ:2:2104:15343:197393 1:N:18:1
 
 USAGE
 
