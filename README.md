@@ -28,7 +28,7 @@ This folder contains the genome assemblies of 7 S. cerevisiae and 5 S. paradoxus
 ## Telomere length estimation pipeline
 This folder contains all files and scripts needed to estimate telomere length from whole genome sequencing data (WGS).
 
-Files and scripts needed to reproduce the analyses are contained in the subfolders "Base files" and "Source code", respectively. "Base files" contains the *S. cerevisiae* (DBVPG6765.genome.fa) and *S. paradoxus* (CBS432.genome.fa) reference genomes used in this paragraph of the manuscript, their subtelomeric coordinates (DBVPG6765.subtel.txt and CBS432.subtel.txt) and a list of reliable markers (DBVPG6765_CBS432_LOHmarkers.txt) used to define loss-of-heterozygosity (LOH) regions in the living ancestor and introgression regions in the Alpechin, Brazilian bioethanol, Mexican agave and French Guyana clades.
+Files and scripts needed to run the pipeline are contained in the subfolders "Base files" and "Source code", respectively. "Base files" contains the *S. cerevisiae* (DBVPG6765.genome.fa) and *S. paradoxus* (CBS432.genome.fa) reference genomes used in this paragraph of the manuscript, their subtelomeric coordinates (DBVPG6765.subtel.txt and CBS432.subtel.txt) and a list of reliable markers (DBVPG6765_CBS432_LOHmarkers.txt) used to define loss-of-heterozygosity (LOH) regions in the living ancestor and introgression regions in the Alpechin, Brazilian bioethanol, Mexican agave and French Guyana clades.
 
 To reproduce the analyses performed in the paper, download the reads for the sample SAMN13540515 from the SRA, NCBI archive. These reads correspond to the living ancestor.
 
