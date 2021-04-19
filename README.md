@@ -8,7 +8,7 @@ This repository contains supporting material for the manuscript:
 To clone this repository, run the following command in a local directory:
 
 ```
-$ git clone 
+$ git clone https://github.com/mdangiolo89/Different-telomere-length-patterns-between-domestic-and-wild-S.-cerevisiae-isolates.git
 ```
 
 
