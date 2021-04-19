@@ -25,8 +25,8 @@ Sequence data for the strains used in this project were part of another study (h
 ## Simulated datasets
 This folder contains the genome assemblies of 7 S. cerevisiae and 5 S. paradoxus strains modified to contain synthetic telomeres of known length. The original genome assemblies were part of another study (https://yjx1217.github.io/Yeast_PacBio_2016/welcome/). The list of synthetic telomeres which have been used for replacement is contained in the file "Synthetic_telomeric_repeats.fa".
 
-## Mapping LOH and introgressions’ boundaries
-This folder contains all files and scripts needed to reproduce the analyses performed in the corresponding paragraph of the paper, as well as final pan-introgression maps and LOH tables resulting from this analysis.
+## Telomere length estimation pipeline
+This folder contains all files and scripts needed to estimate telomere length from whole genome sequencing data (WGS).
 
 Files and scripts needed to reproduce the analyses are contained in the subfolders "Base files" and "Source code", respectively. "Base files" contains the *S. cerevisiae* (DBVPG6765.genome.fa) and *S. paradoxus* (CBS432.genome.fa) reference genomes used in this paragraph of the manuscript, their subtelomeric coordinates (DBVPG6765.subtel.txt and CBS432.subtel.txt) and a list of reliable markers (DBVPG6765_CBS432_LOHmarkers.txt) used to define loss-of-heterozygosity (LOH) regions in the living ancestor and introgression regions in the Alpechin, Brazilian bioethanol, Mexican agave and French Guyana clades.
 
@@ -52,34 +52,3 @@ In the case of the Alpechins, the coordinates included in the "$sample....C.anno
 Note that the same set of scripts has been used to annotate LOH and introgression regions in other samples included in the paper, which have a different structure in the name of their reads. For these additional samples, a modified version of the pipeline must be used and is available upon request.
 
 Pan-introgression maps for all the introgressed clades (Alpechin, Brazilian bioethanol, Mexican agave and French Guyana) and LOH maps of the living ancestor are provided in separate subfolders.
-
-
-## Variant calling and SNVs analysis
-This folder contains all files and scripts needed to reproduce the analyses performed in the corresponding paragraph of the paper, as well as final tables resulting from this analysis, indicating the alleles present at each *de novo* mutation site for all the Alpechin strains and the 25 living ancestor's gametes.
-
-Files and scripts needed to reproduce the analyses are contained in the subfolders "Base files" and "Source code", respectively. "Base files" contains the reference genome used in this paragraph of the manuscript (a concatenation of the reference genomes DBVPG6765 and CBS432), as well as a list of heterozygous *de novo* mutations present in the living ancestor's *S. paradoxus* and *S. cerevisiae* LOH blocks.
-To reproduce the analyses performed in the paper, download the reads associated to the sample SAMN13540515 from the SRA, NCBI archive. These reads correspond to the living ancestor.
-
-### Usage
-Download the files in the "Base files" and "Source code" folder and put them in the same local directory on your computer, together with the example reads downloaded from the SRA, NCBI archive. Prior to start the analysis, ensure that the file "sample_infoDBVCBS.txt" contains the prefix of the example reads (BCM_AQF) and the prefix of the reference genome on which you want to perform the mapping and variant calling (DBVCBS in this case). If you want to perform this analysis on other samples included in the paper, ensure to change the corresponding strings in the file "sample_infoDBVCBS.txt".
-
-To launch the analysis, type on the command line:
-
-```
-$ sh annotatevariants.sh
-```
-
-Since the analysis might take long to perform, it is recommended to use the options "nohup" to ensure that the process keeps running if the connection with the server is lost, and "&" to launch the process in background.
-The pipeline will produce many intermediate files, including bam files, vcf files and coverage files. The final output files have the suffix ".variants" and contain the list of alleles present in the sample for a list of sites containing *de novo* mutations in the living ancestor's *S. paradoxus* (spar.genotype.variants) or *S. cerevisiae* (scer.genotype.variants) LOH regions. The files contain the chromosome, position and allele in a tab-separated format. When "REF" is present in the allele field the sample contains the same allele present in the reference genome at that site. When [ATCG] is present in the allele field the sample contains a *de novo* allele not present in the reference genome at that site, but present in the living ancestor's genome. When NA is present in the allele field the sample does not present an introgression in that region and therefore that site is not consider for further analyses. Notice that in this example we are analysing the living ancestor's genome, which contains *S. paradoxus* and *S. cerevisiae* LOH in all the sites considered. Therefore no NAs should be present in the output files.
-
-
-## Estimation of the living ancestor's base substitution rate and phenotypic impact
-This folder contains vcf files with *de novo* mutations occurred during the return-to-growth (RTG) and mutation accumulation lines (MAL) experiments. 
-
-
-## Molecular dating of genome instability and Alpechin emergence
-The list of synonymous sites used for the estimation based on the strict molecular clock model is provided, along with the fasta sequences used for the estimation based on the random, local molecular clock model.
-
-
-## GO term analysis and annotation of LOH and introgressed genes
-We provide a complete list of introgressed genes present in the Alpechin, Brazilian bioethanol, Mexican agave and French Guyana clades.
