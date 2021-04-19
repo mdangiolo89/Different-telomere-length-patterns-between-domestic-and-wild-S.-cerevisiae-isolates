@@ -40,12 +40,13 @@ Note that the first module of the pipeline can be used to detect whatever motif 
 
 ### Protocol
 
-## Pre-processing steps
+#### Pre-processing steps
 
 VERY IMPORTANT: the names of the read files must be in the following format in order to be processed by the pipeline: 
 
-\$$SAMPLE.R1.fastq.gz
-\$SAMPLE.R2.fastq.gz
+$SAMPLE.R1.fastq.gz
+
+$SAMPLE.R2.fastq.gz
 
 1) Modify the names of the reads files before proceeding with the next steps. If names are already in the right format, proceed to step 2.
 
@@ -55,7 +56,11 @@ $ seqtk seq -a $SAMPLE.R1.fastq.gz > $SAMPLE.R1.fasta
 
 $ seqtk seq -a $SAMPLE.R2.fastq.gz > $SAMPLE.R2.fasta
 
-NOTE: whatever other method to convert fastq.gz files to FASTA is acceptable, but the names of the output files must respect this format: \$SAMPLE.R1.fasta, \$SAMPLE.R2.fasta.
+NOTE: whatever other method to convert fastq.gz files to FASTA is acceptable, but the names of the output files must respect this format: 
+
+$SAMPLE.R1.fasta
+
+$SAMPLE.R2.fasta.
 
 3) Combine the FASTA reads in a single file and remove the separate files with the following command lines:
 
@@ -83,7 +88,7 @@ $ perl readnamemodifier_oldnameformat.pl A887R10.fasta >> A887R10.fasta.newname
 
 5) Delete the suffix “newname” from the file names. The original FASTA file will be automatically overwritten.
 
-Telomere length, ITS content and Y' copy nuber estimation
+#### Telomere length, ITS content and Y' copy nuber estimation
 
 6)  Scan the reads file in search of telomeric motifs: 
 
