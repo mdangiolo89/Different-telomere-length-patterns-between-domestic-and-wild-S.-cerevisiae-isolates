@@ -12,19 +12,18 @@ $ git clone https://github.com/mdangiolo89/Different-telomere-length-patterns-be
 ```
 
 
-Note that to run the scripts contained in this repository, you must have installed the following softwares: bwa (http://bio-bwa.sourceforge.net/bwa.shtml), samtools (http://www.htslib.org/doc/samtools.html), picardtools (https://broadinstitute.github.io/picard/), perl (https://www.perl.org/), freebayes (https://github.com/ekg/freebayes), vcflib (https://github.com/vcflib/vcflib), vt (https://github.com/atks/vt), vcftools (http://vcftools.sourceforge.net/). 
+Note that to run the scripts contained in this repository, you must have installed the following softwares: bwa (http://bio-bwa.sourceforge.net/bwa.shtml), samtools (http://www.htslib.org/doc/samtools.html), picardtools (https://broadinstitute.github.io/picard/), perl (https://www.perl.org/), awk. 
 
 
 Please report any issues or questions to melania.dangiolo(at)unice.fr
 
 
 ## Sequence data
-Sequence data for the strains belonging to the Alpechin, Brazilian bioethanol, Mexican agave and French Guyana clades were part of another study (https://doi.org/10.1038/s41586-018-0030-5) and were previously submitted to the Sequence Read Archive (SRA) NCBI under the accession number ERP014555. The genome sequences generated in this study are available at Sequence Read Archive (SRA), NCBI under the accession codes BioProject ID PRJNA594913, Biosample ID SAMN13540515 - SAMN13540586.
+Sequence data for the strains used in this project were part of another study (https://doi.org/10.1038/s41586-018-0030-5) and were previously submitted to the Sequence Read Archive (SRA) NCBI under the accession number ERP014555. The simulated genome sequences generated in this study and used to validate the pipeline are available upon request.
 
 
-## Sequencing and de novo assembly of the living ancestor’s genome
-This folder contains the genome assembly of the living ancestor based on long-read (PacBio) sequencing.
-
+## Simulated datasets
+This folder contains the genome assemblies of 7 S. cerevisiae and 5 S. paradoxus strains modified to contain synthetic telomeres of known length. The original genome assemblies were part of another study (https://yjx1217.github.io/Yeast_PacBio_2016/welcome/). The list of synthetic telomeres which have been used for replacement is contained in the file xxx.
 
 ## Mapping LOH and introgressions’ boundaries
 This folder contains all files and scripts needed to reproduce the analyses performed in the corresponding paragraph of the paper, as well as final pan-introgression maps and LOH tables resulting from this analysis.
