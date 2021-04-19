@@ -48,9 +48,9 @@ $SAMPLE.R1.fastq.gz
 
 $SAMPLE.R2.fastq.gz
 
-1) Modify the names of the reads files before proceeding with the next steps. If names are already in the right format, proceed to step 2.
+1. Modify the names of the reads files before proceeding with the next steps. If names are already in the right format, proceed to step 2.
 
-2) Generate the FASTA files corresponding to the fastq.gz ones using these command lines:
+2. Generate the FASTA files corresponding to the fastq.gz ones using these command lines:
 
 `$ seqtk seq -a $SAMPLE.R1.fastq.gz > $SAMPLE.R1.fasta`
 
@@ -62,12 +62,12 @@ $SAMPLE.R1.fasta
 
 $SAMPLE.R2.fasta.
 
-3) Combine the FASTA reads in a single file and remove the separate files with the following command lines:
+3. Combine the FASTA reads in a single file and remove the separate files with the following command lines:
 
 `$ for a in *fasta; do j=${a/.R[12].fasta/}; cat $a >> $j.fasta; done`
 `$ rm -i *\.R[12].fasta`
 
-4) Verify that read names are in the format accepted by the pipeline:
+4. Verify that read names are in the format accepted by the pipeline:
 
 @HWUSI-EAS100R:6:73:941:1973#0/1
 
@@ -88,19 +88,19 @@ USAGE
 
 `$ perl readnamemodifier_oldnameformat.pl A887R10.fasta >> A887R10.fasta.newname`
 
-5) Delete the suffix “newname” from the file names. The original FASTA file will be automatically overwritten.
+5. Delete the suffix “newname” from the file names. The original FASTA file will be automatically overwritten.
 
 #### Telomere length, ITS content and Y' copy nuber estimation
 
-6)  Scan the reads file in search of telomeric motifs: 
+6.  Scan the reads file in search of telomeric motifs: 
 
 `$ perl find_motif_in_reads.pl -i $SAMPLE.fasta -m motif.txt -o $SAMPLE.fasta.readscan -l $SAMPLE.fasta.readlist -c INT`
 
 "i" is the input file (in FASTA format), "m" is a file containing the telomeric motifs for pattern matching, "o" is an output file containing a list of the reads classified as telomeric and the positions of their telomeric motifs, "l" is another output file containing the names of the reads classified as telomeric, "c" represents the minimum number of bp covered by telomeric motifs that must be contained in a read in order to classify it as telomeric. This value can be set by the user and must be an integer number (INT).
 
-7) Map the reads on a modified reference genome containing a long-version Y' element as additional entry and in which all telomeres and other repetitive sequences have been masked:
+7. Map the reads on a modified reference genome containing a long-version Y' element as additional entry and in which all telomeres and other repetitive sequences have been masked:
 
-$ `sh run_mapping_sgdytelmasked.sh`
+`$ sh run_mapping_sgdytelmasked.sh`
 
 The main output file is $SAMPLE.lengths.txt, which contains an estimation of coverage in regions with GC content between 50 and 80%, Y' copy number, ITS content and telomere length. All estimations must be intended per haploid genome. The telomere value represents the estimation of the length of a single telomere in the sample, averaged across the whole population of telomeres. 
 
