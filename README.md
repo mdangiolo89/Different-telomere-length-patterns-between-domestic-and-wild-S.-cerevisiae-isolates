@@ -51,7 +51,7 @@ Download the files in the "Base files" and "Source code" folder and put them in 
 
 >$SAMPLE.R2.fastq.gz
 
-**1.** Modify the names of the reads files before proceeding with the next steps. If names are already in the right format, proceed to step 2.
+**1.** Modify the names of the read files before proceeding with the next steps. If names are already in the right format, proceed to step 2.
 
 **2.** Generate the FASTA files corresponding to the fastq.gz ones using these command lines:
 
@@ -68,13 +68,14 @@ Download the files in the "Base files" and "Source code" folder and put them in 
 **3.** Combine the FASTA reads in a single file and remove the separate files with the following command lines:
 
 `$ for a in *fasta; do j=${a/.R[12].fasta/}; cat $a >> $j.fasta; done`
+
 `$ rm -i *\.R[12].fasta`
 
 **4.** Verify that read names are in the format accepted by the pipeline:
 
 >@HWUSI-EAS100R:6:73:941:1973#0/1
 
-If read names are in this format, proceed to step 6. If not, they must be modified. The folder contains a pre-made script (readnamemodifier_newnameformat.pl) to convert the most common read names to the format accepted by the pipeline:
+If read names are in this format, proceed to step 6. If not, they must be modified. The folder contains a pre-made script (readnamemodifier_newnameformat.pl) to convert these most common read names:
 
 >@EAS139:136:FC706VJ:2:2104:15343:197393 1:Y:18:ATCACG
 
@@ -84,7 +85,7 @@ If read names are in this format, proceed to step 6. If not, they must be modifi
 
 `$ perl readnamemodifier_newnameformat.pl $SAMPLE.fasta >> $SAMPLE.fasta.newname`
 
-Alternatively, another pre-made script (readnamemodifier_oldnameformat.pl) is available to convert the less common read name format:
+Alternatively, another pre-made script (readnamemodifier_oldnameformat.pl) is available to convert this less common read name format:
 
 >\>ERR1639388.1 HX7_20360:5:2212:29965:36662/1
 
@@ -92,11 +93,11 @@ Alternatively, another pre-made script (readnamemodifier_oldnameformat.pl) is av
 
 `$ perl readnamemodifier_oldnameformat.pl A887R10.fasta >> A887R10.fasta.newname`
 
-**5.** Delete the suffix “newname” from the file names. The original FASTA file will be automatically overwritten.
+**5.** Delete the suffix “newname” from the file name. The original FASTA file will be automatically overwritten.
 
 #### Telomere length, ITS content and Y' copy nuber estimation
 
-**6.**  Scan the reads file in search of telomeric motifs: 
+**6.**  Scan the final FASTA file in search of telomeric motifs: 
 
 `$ perl find_motif_in_reads.pl -i $SAMPLE.fasta -m motif.txt -o $SAMPLE.fasta.readscan -l $SAMPLE.fasta.readlist -c INT`
 
