@@ -26,7 +26,7 @@ Sequence data for the strains used in this project were part of another study (h
 This folder contains the genome assemblies of 7 S. cerevisiae and 5 S. paradoxus strains modified to contain synthetic telomeres of known length. The original genome assemblies were part of another study (https://yjx1217.github.io/Yeast_PacBio_2016/welcome/). The list of synthetic telomeres which have been used for replacement is contained in the file "Synthetic_telomeric_repeats.fa".
 
 ## Telomere length estimation pipeline
-This folder contains all files and scripts needed to estimate telomere length from whole genome sequencing data (WGS).
+This folder contains all files and scripts needed to estimate telomere length from whole genome sequencing data.
 
 Files and scripts needed to run the pipeline are contained in the subfolders "Base files" and "Source code", respectively. "Base files" contains:
 - the text file used for pattern matching of telomeric motifs (motif.txt);
@@ -38,9 +38,12 @@ Files and scripts needed to run the pipeline are contained in the subfolders "Ba
 
 Note that the first module of the pipeline can be used to detect whatever motif in the reads, not only telomeric ones. It is sufficient to edit the file "motif.txt" with the motif you want to search for.
 
+
 ### Protocol
 
 #### Pre-processing steps
+
+Download the files in the "Base files" and "Source code" folder and put them in the same local directory on your computer, together with the read files of the sample you are interested in.
 
 **VERY IMPORTANT**: the names of the read files must be in the following format in order to be processed by the pipeline: 
 
@@ -103,6 +106,6 @@ Alternatively, another pre-made script (readnamemodifier_oldnameformat.pl) is av
 
 `$ sh run_mapping_sgdytelmasked.sh`
 
-The main output file is $SAMPLE.lengths.txt, which contains an estimation of coverage in regions with GC content between 50 and 80%, Y' copy number, ITS content and telomere length. All estimations must be intended per haploid genome. The telomere value represents the estimation of the length of a single telomere in the sample, averaged across the whole population of telomeres. 
+The main output file is $SAMPLE.lengths.txt, which contains an estimation of coverage in regions with GC content between 50 and 80%, Y' copy number, ITS content and telomere length. All estimations must be intended per haploid genome. The telomere value represents the estimation of the length of a single telomere in the sample, averaged across the whole population of telomeres. Note that ITS content and telomere length are relative estimations, not absolute ones, and a variable underestimation rate can be present among independent sequencing batches. Therefore, comparing estimations between samples which have been sequenced at different times/institutes will not give any meaningful results. 
 
 **TIPS&TRICKS**: it is highly recommended to run the pipeline on a server and perform steps 6 and 7 using “nohup” and “&” to ensure the process is not lost upon connection failure. Running times can vary between 30 minutes to 2 hours for step 6 and 7, depending on the sample's coverage.
