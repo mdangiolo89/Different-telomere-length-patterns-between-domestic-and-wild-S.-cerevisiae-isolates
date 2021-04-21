@@ -19,7 +19,7 @@ Please report any issues or questions to melania.dangiolo(at)unice.fr
 
 
 ## Sequence data
-Sequence data for the strains used in this project were part of another study (https://doi.org/10.1038/s41586-018-0030-5) and were previously submitted to the Sequence Read Archive (SRA) NCBI under the accession number ERP014555. The simulated genome sequences generated in this study and used to validate the pipeline are available upon request.
+Sequence data for the strains used in this project were part of another study (https://doi.org/10.1038/s41586-018-0030-5) and were previously submitted to the Sequence Read Archive (SRA) NCBI under the accession number ERP014555. The sequence data of the simulated genome sequences generated in this study and used to validate the pipeline are available upon request.
 
 
 ## Simulated datasets
