@@ -21,6 +21,8 @@ Please report any issues or questions to melania.dangiolo(at)unice.fr
 ## Sequence data
 Sequence data for the strains used in this project were part of another study (https://doi.org/10.1038/s41586-018-0030-5) and were previously submitted to the Sequence Read Archive (SRA) NCBI under the accession number ERP014555. The sequence data of the simulated genome sequences generated in this study and used to validate the pipeline are available upon request.
 
+## Sanger reads
+This folder contains Sanger reads used to estimate telomere length of S. cerevisiae and S. paradoxus strains from the SGRP project.
 
 ## Simulated datasets
 This folder contains the genome assemblies of 7 S. cerevisiae and 5 S. paradoxus strains modified to contain synthetic telomeres of known length. The original genome assemblies were part of another study (https://yjx1217.github.io/Yeast_PacBio_2016/welcome/). The list of synthetic telomeres which have been used for replacement is contained in the file "Synthetic_telomeric_repeats.fa".
