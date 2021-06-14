@@ -38,6 +38,8 @@ Files and scripts needed to run the pipeline are contained in the subfolders "Ba
 
 "Source code" contains the two core modules of the pipeline (find_motif_in_reads.pl and run_mapping_sgdytelmasked.sh) plus additional scripts which are called inside these modules. In addition, the folder contains scripts to modify read names in the case they do not comply with the standard format accepted by the pipeline (readnamemodifier_oldnameformat.pl and readnamemodifier_newnameformat.pl).
 
+In addition, the file "SGD_ref.fa.out.gff" contains genomic coordinates that have been masked in the modified reference genome used for the mapping.
+
 Note that the first module of the pipeline can be used to detect whatever motif in the reads, not only telomeric ones. It is sufficient to edit the file "motif.txt" with the motif you want to search for.
 
 
