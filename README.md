@@ -27,8 +27,22 @@ This folder contains Sanger reads used to estimate telomere length of S. cerevis
 ## Simulated datasets
 This folder contains the genome assemblies of 7 S. cerevisiae and 5 S. paradoxus strains modified to contain synthetic telomeres of known length. The original genome assemblies were part of another study (https://yjx1217.github.io/Yeast_PacBio_2016/welcome/). The list of synthetic telomeres which have been used for replacement is contained in the file "Synthetic_telomeric_repeats.fa".
 
+## Correlation analysis
+This folder contains a matrix with the phenotype data used to determine the association between telomere length and other variables.
+
+## GWAS
+This folder contains all the files needed to perform a genome-wide association study on our telomere length data.
+
+Files with the genotypes of our strains (all005.bed/bim/fam/nosex) are contained in the subfolder "Base files", along with the file containing telomere length data for the same strains (GWASbase_euploiddiploid_all_TEL.txt).
+
+The folder "QTLs analysis" contains matrixes used to generate the plots in extended data fig.7 and fig. 4B. These matrixes contain the prevalence of strains carrying more than 1 copy of CNV hits per lineage (GWAS_CN_freq>1.txt) and the prevalence of strains carrying the minor allele, either in homozygosity or in heterozygosity (GWAS_SV_freqalt.csv). In addition, the exact CN and genotype of both CNV hits and SNV hits is given for each isolate in the files "GWAS_CN_p005.molten.nucl.csv" (nuclear genome hits), "GWAStel_CN_p005.molten.mito.txt" (mitochondrial genome hits) and "GWAS_SV_p005.molten.csv", respectively.
+
+## LOFs analysis
+This folder contains a matrix indicating the presence (1)/absence (0) of a LOF mutation in each gene per each strain. Data are divided between Telomere Length Maintenance (TLM) and non-TLM genes.
+
+
 ## Telomere length estimation pipeline
-This folder contains all files and scripts needed to estimate telomere length from whole genome sequencing data.
+This folder contains all the files and scripts needed to estimate telomere length from whole genome sequencing data.
 
 Files and scripts needed to run the pipeline are contained in the subfolders "Base files" and "Source code", respectively. "Base files" contains:
 - the text file used for pattern matching of telomeric motifs (motif.txt);
