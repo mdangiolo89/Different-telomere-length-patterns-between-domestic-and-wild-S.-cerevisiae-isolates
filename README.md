@@ -38,7 +38,7 @@ Files with the genotypes of our strains (all005.bed/bim/fam/nosex) are contained
 The folder "QTLs analysis" contains matrixes used to generate the plots in extended data fig.7 and fig. 4B. These matrixes contain the prevalence of strains carrying more than 1 copy of CNV hits per lineage (GWAS_CN_freq>1.txt) and the prevalence of strains carrying the minor allele, either in homozygosity or in heterozygosity (GWAS_SV_freqalt.csv). In addition, the exact CN and genotype of both CNV and SNV hits is given for each isolate in the files "GWAS_CN_p005.molten.nucl.csv" (nuclear genome hits), "GWAStel_CN_p005.molten.mito.txt" (mitochondrial genome hits) and "GWAS_SV_p005.molten.csv", respectively.
 
 ## LOFs analysis
-This folder contains a matrix indicating the presence (1)/absence (0) of a LOF mutation in each gene per each strain. Data are divided between Telomere Length Maintenance (TLM) and non-TLM genes.
+This folder contains a matrix indicating the presence (1)/absence (0) of a LOF mutation in each gene per each strain. Data are divided between Telomere Length Maintenance (TLM) and non-TLM genes. TLM genes are further divided into the ones conferring shorter/longer telomeres when deleted.
 
 
 ## Telomere length estimation pipeline
