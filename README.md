@@ -57,7 +57,7 @@ In addition, the file "SGD_ref.fa.out.gff" contains genomic coordinates that hav
 Note that the first module of YeaISTY can be used to detect whatever motif in the reads, not only telomeric ones. It is sufficient to edit the file "motif.txt" with the motif you want to search for.
 
 
-### Protocol
+### Usage manual
 
 #### Pre-processing steps
 
