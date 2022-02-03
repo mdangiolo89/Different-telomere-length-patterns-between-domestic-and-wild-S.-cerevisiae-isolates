@@ -2,7 +2,7 @@
 
 This repository contains supporting material for the manuscript:
 
-"Different telomere length patterns between domestic and wild S. cerevisiae isolates"
+"Telomeres are shorter in wild Saccharomyces cerevisiae isolates than in domesticated ones"
 
 
 To clone this repository, run the following command in a local directory:
