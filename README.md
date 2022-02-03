@@ -113,7 +113,7 @@ Alternatively, another pre-made script (readnamemodifier_oldnameformat.pl) is av
 
 **5.** Delete the suffix “newname” from the file name. The original FASTA file will be automatically overwritten.
 
-#### Telomere length, ITS content and Y' copy nuber estimation
+#### Telomere length, ITS content and Y' copy number estimation
 
 **6.**  Scan the final FASTA file in search of telomeric motifs: 
 
