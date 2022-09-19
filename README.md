@@ -28,7 +28,7 @@ This folder contains Sanger reads used to estimate telomere length of S. cerevis
 This folder contains the genome assemblies of 7 S. cerevisiae and 5 S. paradoxus strains modified to contain synthetic telomeres of known length. The original genome assemblies were part of another study (https://yjx1217.github.io/Yeast_PacBio_2016/welcome/). The list of synthetic telomeres which have been used for replacement is contained in the file "Synthetic_telomeric_repeats.fa".
 
 ## Correlation analysis
-This folder contains a matrix with the phenotype data used to determine the association between telomere length and other variables.
+This folder contains a matrix with the phenotype data used to determine the association between telomere length and other variables. In addition, it contains the phylogenetic tree used for the PGLS analysis.
 
 ## GWAS
 This folder contains all the files needed to perform a genome-wide association study on our telomere length data.
