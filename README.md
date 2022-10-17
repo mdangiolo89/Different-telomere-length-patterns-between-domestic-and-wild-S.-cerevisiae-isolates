@@ -40,6 +40,10 @@ The folder "QTLs analysis" contains matrixes used to generate the plots in exten
 ## LOFs analysis
 This folder contains a matrix indicating the presence (1)/absence (0) of a LOF mutation in each gene per each strain. Data are divided between Telomere Length Maintenance (TLM) and non-TLM genes. TLM genes are further divided into the ones conferring shorter/longer telomeres when deleted.
 
+## Other scripts
+This folder contains the script used to annotate Interstitial Telomeric Sequences (ITS) in the Yeast Population Reference Panel (YPRP). Usage:
+
+`$ perl find_motif_in_genome.pl -i $GENOME.fasta -m motif.txt -p $prefix`
 
 ## YeaISTY (Yeast ITS, Telomeres and Y' elements estimator)
 This folder contains all the files and scripts needed to estimate telomere length from whole genome sequencing data.
