@@ -15,7 +15,7 @@ $ git clone https://github.com/mdangiolo89/Different-telomere-length-patterns-be
 Note that to run the scripts contained in this repository, you must have installed the following softwares: bwa (http://bio-bwa.sourceforge.net/bwa.shtml), samtools (http://www.htslib.org/doc/samtools.html), picardtools (https://broadinstitute.github.io/picard/), perl (https://www.perl.org/), awk (https://en.wikipedia.org/wiki/AWK). 
 
 
-Please report any issues or questions to melania.dangiolo(at)unice.fr
+
 
 
 ## Sequence data
